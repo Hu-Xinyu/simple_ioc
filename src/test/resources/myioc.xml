@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/beans ">
+
+    <bean name="helloWorld" class="cn.huxinyu.spring.ioc.HelloWorld">
+        <property name="name" value="huxinyu"/>
+    </bean>
+
+    <bean name="referenceBean" class="cn.huxinyu.spring.ioc.ReferenceBean">
+        <property name="helloWorld" ref="helloWorld"/>
+    </bean>
+
+</beans>
